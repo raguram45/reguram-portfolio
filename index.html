@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reguram | Electronics & VLSI Engineering Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background Canvas + Optional Custom Background Image Overlay -->
+  <div class="bg-image-layer"></div>
+  <canvas id="pcb-canvas"></canvas>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#hero" class="logo">REGURAM<span class="accent-dot">.VLSI</span></a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Arsenal</a>
+        <a href="#lab">Logic Lab</a>
+        <a href="#projects">Projects</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#contact" class="nav-cta">Connect</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- 1. HERO SECTION -->
+  <section id="hero" class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-text fade-in">
+        <div class="status-badge">
+          <span class="pulse-dot"></span> OPEN TO RESEARCH &amp; HARDWARE COLLABORATIONS
+        </div>
+        <h1>HELLO, I'M <span class="gradient-text">REGURAM.</span></h1>
+        <div class="role-lines">
+          <p>Electronics &amp; Communication Engineering Student.</p>
+          <p>IoT Project Developer.</p>
+          <p>Future VLSI Design Engineer.</p>
+        </div>
+        <p class="headline-box">
+          "Electronics Engineer in Progress | IoT Project Developer | Future VLSI Design Engineer"
+        </p>
+        <p class="hero-intro">
+          First-year ECE undergraduate at <strong>Sir Issac Newton College of Engineering and Technology</strong>, bridging embedded IoT hardware with digital logic design on a focused trajectory toward semiconductor engineering at <strong>Broadcom</strong>.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Explore Builds</a>
+          <a href="#lab" class="btn btn-secondary">Test Logic Lab</a>
+        </div>
+      </div>
+
+      <!-- Animated Profile Photo Frame -->
+      <div class="hero-visual fade-in">
+        <div class="wafer-frame">
+          <svg class="circuit-ring" viewBox="0 0 320 320" fill="none">
+            <circle cx="160" cy="160" r="152" stroke="url(#grad1)" stroke-width="1.5" stroke-dasharray="10 6" />
+            <circle cx="160" cy="160" r="138" stroke="#EC4899" stroke-width="1" stroke-opacity="0.45" />
+            <defs>
+              <linearGradient id="grad1" x1="0" y1="0" x2="320" y2="320" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A855F7" />
+                <stop offset="1" stop-color="#EC4899" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <div class="profile-photo-wrapper">
+            <!-- ========================================================= -->
+            <!-- PHOTO LINK PASTE PLACE (HERO): Replace src with your link -->
+            <!-- ========================================================= -->
+            <img
+              src="assets/profile/reguram.png"
+              alt="Reguram - ECE Student & Future VLSI Engineer"
+              class="profile-photo"
+            />
+          </div>
+
+          <div class="chip-tag top-tag">TARGET: BROADCOM</div>
+          <div class="chip-tag bottom-tag">ECE // YEAR 01</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. ABOUT ME SECTION -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01 // ACADEMIC &amp; SILICON PROFILE</span>
+        <h2>Engineering Foundation</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="glass-card about-main">
+          <div class="about-profile-row">
+            <!-- ========================================================== -->
+            <!-- PHOTO LINK PASTE PLACE (ABOUT): Replace src with your link -->
+            <!-- ========================================================== -->
+            <img
+              src="assets/profile/reguram.png"
+              alt="Reguram Portrait"
+              class="about-avatar"
+            />
+            <div>
+              <h3>Reguram</h3>
+              <p class="violet-text">B.E. Electronics &amp; Communication Engineering (1st Year)</p>
+              <p class="silver-text">Sir Issac Newton College of Engineering and Technology</p>
+            </div>
+          </div>
+          <p class="about-desc">
+            Passionate about how physical silicon translates Boolean logic into high-speed computing. Currently mastering circuit theory, microcontrollers (ESP32/ESP8266), and digital electronics while building a strong foundation in HDL and RTL design workflows.
+          </p>
+        </div>
+
+        <div class="glass-card stat-card">
+          <span class="stat-label">PRIMARY DOMAIN</span>
+          <div class="stat-value gradient-text">VLSI &amp; RTL</div>
+          <p>CMOS Logic, Verilog HDL &amp; Digital Architecture</p>
+        </div>
+
+        <div class="glass-card stat-card">
+          <span class="stat-label">DREAM COMPANY</span>
+          <div class="stat-value magenta-text">BROADCOM</div>
+          <p>Semiconductor &amp; Infrastructure Silicon Design</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. TECHNICAL ARSENAL -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02 // TECHNICAL ARSENAL</span>
+        <h2>Core Competencies</h2>
+      </div>
+
+      <div class="filter-tabs">
+        <button class="tab-btn active" data-filter="all">All Domains</button>
+        <button class="tab-btn" data-filter="vlsi">VLSI &amp; Digital</button>
+        <button class="tab-btn" data-filter="iot">IoT &amp; Hardware</button>
+        <button class="tab-btn" data-filter="code">Programming</button>
+      </div>
+
+      <div class="skills-grid" id="skills-grid">
+        <div class="glass-card skill-card" data-category="vlsi">
+          <div class="skill-top"><span>Digital Logic &amp; Boolean Algebra</span><span>85%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+        </div>
+        <div class="glass-card skill-card" data-category="vlsi">
+          <div class="skill-top"><span>Verilog HDL (Learning &amp; Simulation)</span><span>65%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 65%;"></div></div>
+        </div>
+        <div class="glass-card skill-card" data-category="iot">
+          <div class="skill-top"><span>ESP32 / ESP8266 &amp; Sensors</span><span>90%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+        </div>
+        <div class="glass-card skill-card" data-category="iot">
+          <div class="skill-top"><span>Circuit Analysis &amp; Prototyping</span><span>82%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 82%;"></div></div>
+        </div>
+        <div class="glass-card skill-card" data-category="code">
+          <div class="skill-top"><span>Embedded C / C++</span><span>84%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 84%;"></div></div>
+        </div>
+        <div class="glass-card skill-card" data-category="code">
+          <div class="skill-top"><span>HTML5, CSS3 &amp; JavaScript</span><span>80%</span></div>
+          <div class="progress-bar"><div class="progress-fill" style="width: 80%;"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. INTERACTIVE DIGITAL LOGIC LAB -->
+  <section id="lab" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03 // INTERACTIVE SILICON SANDBOX</span>
+        <h2>Digital Logic Gate Emulator</h2>
+      </div>
+
+      <div class="glass-card lab-container">
+        <div class="gate-selector" id="gate-selector">
+          <button class="gate-btn active" data-gate="AND">AND</button>
+          <button class="gate-btn" data-gate="OR">OR</button>
+          <button class="gate-btn" data-gate="XOR">XOR</button>
+          <button class="gate-btn" data-gate="NAND">NAND</button>
+          <button class="gate-btn" data-gate="NOR">NOR</button>
+          <button class="gate-btn" data-gate="XNOR">XNOR</button>
+        </div>
+
+        <div class="lab-workspace">
+          <div class="inputs-panel">
+            <button class="pin-toggle active" id="input-a">INPUT A: <span>1</span></button>
+            <button class="pin-toggle" id="input-b">INPUT B: <span>0</span></button>
+          </div>
+
+          <div class="gate-display">
+            <div class="gate-chip" id="active-gate-label">AND GATE</div>
+            <div class="verilog-snippet" id="verilog-code">assign Y = A &amp; B;</div>
+          </div>
+
+          <div class="output-panel">
+            <div class="output-led" id="output-led">
+              OUTPUT Y: <span id="output-val">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. FEATURED PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04 // ENGINEERING BUILDS</span>
+        <h2>Featured Projects</h2>
+      </div>
+
+      <div class="projects-grid">
+        <article class="glass-card project-card">
+          <span class="project-badge">IOT SIMULATION</span>
+          <h3>ESP Simulator – Virtual IoT Lab</h3>
+          <p>Browser-based virtual lab supporting ESP32 &amp; ESP8266 boards with interactive circuit wiring, code editor, and serial monitor.</p>
+          <div class="tech-tags">
+            <span>JavaScript</span><span>HTML5/CSS3</span><span>Embedded C++</span>
+          </div>
+        </article>
+
+        <article class="glass-card project-card">
+          <span class="project-badge">DIGITAL LOGIC</span>
+          <h3>4-Bit Arithmetic Logic Unit (ALU)</h3>
+          <p>Combinational digital circuit capable of performing bitwise AND, OR, XOR, and binary addition using fundamental logic gates.</p>
+          <div class="tech-tags">
+            <span>Verilog HDL</span><span>Digital Design</span><span>Boolean Logic</span>
+          </div>
+        </article>
+
+        <article class="glass-card project-card">
+          <span class="project-badge">EMBEDDED HARDWARE</span>
+          <h3>Smart Telemetry &amp; Sensor Node</h3>
+          <p>Low-latency wireless sensor node capturing temperature and voltage metrics with real-time serial diagnostics.</p>
+          <div class="tech-tags">
+            <span>ESP8266</span><span>UART / I2C</span><span>C++</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. VLSI CAREER ROADMAP -->
+  <section id="roadmap" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05 // TRAJECTORY TO BROADCOM</span>
+        <h2>4-Year VLSI Engineering Roadmap</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item glass-card">
+          <span class="year-pill">YEAR 01 // CURRENT</span>
+          <h3>Circuit Foundations &amp; Embedded IoT</h3>
+          <p>Mastering Network Theory, Electronic Devices, C/C++, and hands-on ESP32/ESP8266 hardware systems at SINCET.</p>
+        </div>
+        <div class="timeline-item glass-card">
+          <span class="year-pill">YEAR 02</span>
+          <h3>Digital Electronics &amp; Verilog HDL</h3>
+          <p>Combinational/sequential circuit design, FPGA prototyping, and RTL coding in Verilog &amp; SystemVerilog.</p>
+        </div>
+        <div class="timeline-item glass-card">
+          <span class="year-pill">YEAR 03</span>
+          <h3>CMOS VLSI &amp; Static Timing Analysis</h3>
+          <p>Transistor-level design, ASIC physical design flow, STA, and semiconductor research internships.</p>
+        </div>
+        <div class="timeline-item glass-card">
+          <span class="year-pill">YEAR 04 // GOAL</span>
+          <h3>VLSI Design Engineer @ Broadcom</h3>
+          <p>Transitioning into full-time RTL / Physical Design engineering building next-generation high-speed silicon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CONTACT SECTION -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="glass-card contact-box">
+        <span class="section-tag">06 // INITIATE TRANSMISSION</span>
+        <h2>Connect With Reguram</h2>
+        <p>Open to VLSI mentorship, IoT hardware projects, and engineering collaborations.</p>
+
+        <form id="contact-form" class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea rows="4" placeholder="Your Message..." required></textarea>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <p id="form-status" class="form-status"></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Reguram | Electronics &amp; Communication Engineering | Built with Pure Matte Black, Purple &amp; Magenta.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
